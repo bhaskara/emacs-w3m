@@ -4563,7 +4563,7 @@ if it has no scheme part."
   (let (url)
     (w3m-arrived-setup)
     (cond ((null initial)
-	   (when (and (setq initial (w3m-active-region-or-url-at-point t))
+	   (when (and (setq initial (w3m-active-region-or-url-at-point nil))
 		      (not (string-match "[^\000-\177]" initial)))
 	     (setq initial (w3m-url-decode-string initial
 						  w3m-current-coding-system))))
